@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Epixelab - Landing Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style type="text/tailwindcss">
+      @theme {
+        --color-blaze-orange: #ff6600;
+        --color-midnight: #0b1b35;
+        --color-dark-indigo: #1e0e62;
+        --color-purple-blue: #482be7;
+        --color-haiti: #151439;
+        --color-dawn-pink: #ebeaed;
+
+        --font-roboto: "Roboto", sans-serif;
+        --font-poppins: "Poppins", sans-serif;
+        --font-abel: "Abel", sans-serif;
+        --font-dm-sans: "DM Sans", sans-serif;
+
+        @keyframes float {
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+        }
+
+        @keyframes wiggle {
+          0%,
+          100% {
+            transform: rotate(-3deg);
+          }
+          50% {
+            transform: rotate(3deg);
+          }
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-white antialiased">
+    <!-- ============================== NAVBAR ============================== -->
+    <header class="w-full sticky top-0 z-100 bg-white/80 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-[60px]">
+        <nav class="h-[72px] flex items-center justify-between">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <img src="assets/logo.png" alt="Epixelab logo" class="h-8" />
+          </div>
+
+          <!-- Desktop Navigation -->
+          <ul
+            class="hidden lg:flex items-center gap-10 text-sm text-haiti opacity-80"
+          >
+            <li>
+              <a
+                href="#home"
+                class="nav-link font-normal hover:text-blaze-orange transition"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="nav-link font-semibold hover:text-blaze-orange transition"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="#app"
+                class="nav-link font-semibold hover:text-blaze-orange transition"
+                >Our App</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contacts"
+                class="nav-link font-semibold hover:text-blaze-orange transition"
+                >Contacts</a
+              >
+            </li>
+          </ul>
+
+          <!-- Desktop Auth Buttons -->
+          <div class="hidden lg:flex items-center gap-6">
+            <a
+              href="#"
+              class="px-6 py-2 rounded-[10px] text-sm font-medium text-slate-600 transition-all duration-300 hover:bg-blaze-orange hover:text-white hover:shadow-lg"
+            >
+              Log in
+            </a>
+            <a
+              href="#"
+              class="bg-blaze-orange text-white px-6 py-2 rounded-[10px] text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95"
+            >
+              Sign up
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="menu-btn"
+            type="button"
+            class="lg:hidden flex items-center justify-center w-10 h-10 rounded-full border border-blaze-orange opacity-60 text-blaze-orange"
+            aria-label="Toggle navigation"
+            title="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="hidden lg:hidden border-t border-slate-200"
+        >
+          <div class="px-6 py-6 flex flex-col gap-6 text-haiti opacity-80">
+            <a
+              href="#home"
+              class="nav-link hover:text-blaze-orange font-normal transition"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="nav-link font-semibold hover:text-blaze-orange transition"
+              >About Us</a
+            >
+            <a
+              href="#app"
+              class="nav-link font-semibold hover:text-blaze-orange transition"
+              >Our App</a
+            >
+            <a
+              href="#contacts"
+              class="nav-link font-semibold hover:text-blaze-orange transition"
+              >Contacts</a
+            >
+            <div class="pt-4 border-t border-dawn-pink flex flex-col gap-4">
+              <a
+                href="#"
+                class="w-full text-center py-3 rounded-[10px] font-medium text-slate-600 transition-all duration-300 hover:bg-blaze-orange hover:text-white hover:shadow-lg"
+                >Log in</a
+              >
+              <a
+                href="#"
+                class="bg-blaze-orange text-white text-center py-3 rounded-[10px] font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95"
+              >
+                Sign up
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-[60px]">
+      <!-- ============================== HERO ============================== -->
+      <section
+        id="home"
+        class="pt-20 pb-28 grid lg:grid-cols-2 gap-10 items-center"
+      >
+        <!-- LEFT CONTENT -->
+        <div
+          class="relative z-[40] text-center lg:text-left order-last lg:order-first"
+        >
+          <h1
+            class="font-poppins font-extrabold text-4xl md:text-5xl lg:text-[64px] tracking-[-0.01em] leading-tight lg:leading-[1.08] text-midnight"
+          >
+            <span class="block">We boost</span>
+            <span class="block">growth for your</span>
+            <span
+              class="block whitespace-normal lg:whitespace-nowrap max-w-full"
+              >startup business</span
+            >
+          </h1>
+
+          <p
+            class="mt-6 font-poppins font-medium text-lg lg:text-[22px] text-haiti opacity-80 max-w-[520px] mx-auto lg:mx-0"
+          >
+            Our goal is to be at the heart of creativity services industry as a
+            digital creator. We help brands grow faster.
+          </p>
+
+          <div
+            class="mt-8 lg:mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 lg:gap-7"
+          >
+            <a
+              href="#"
+              class="bg-blaze-orange font-poppins text-white text-[16px] px-7 py-3 rounded-[10px] font-medium hover:bg-orange-600 transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95 w-full sm:w-auto text-center"
+            >
+              Get Started
+            </a>
+
+            <a
+              href="#"
+              class="flex items-center gap-3 font-abel text-[18px] text-black px-7 py-3 rounded-[10px] border-2 border-transparent transition-all duration-300 hover:border-haiti hover:shadow-lg"
+            >
+              <img src="./assets/learnMore.png" alt="" class="h-[30px]" />
+              Learn More
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT VISUAL -->
+        <div
+          class="relative w-full max-w-[750px] aspect-[750/630] mx-auto md:ml-auto md:mr-0"
+        >
+          <!-- LIGHTBULB DOODLE (z-0) -->
+          <img
+            src="./assets/bulb-doodle.png"
+            alt="Lightbulb"
+            class="absolute left-[19%] bottom-[33%] w-[24%] z-0 animate-[wiggle_6s_ease-in-out_infinite]"
+          />
+
+          <!-- ARROW DOODLE (z-0) -->
+          <img
+            src="./assets/arrow.png"
+            alt="Arrow"
+            class="absolute left-[70%] top-[10%] w-[27%] z-0 animate-[wiggle_5s_ease-in-out_infinite]"
+          />
+
+          <!-- WHITE CIRCLE (z-10) -->
+          <div
+            class="absolute bottom-[3%] right-[11%] w-[53%] aspect-square bg-white rounded-full shadow-[-20px_40px_60px_rgba(0,0,0,0.15)] z-10"
+          ></div>
+
+          <!-- TOP FLOATING CARD (z-20) -->
+          <div
+            class="absolute z-20 bg-white rounded-xl w-[50%] px-[3%] py-[2%] shadow-lg flex items-center gap-[4%] top-[12%] left-[15%] animate-[float_4s_ease-in-out_infinite]"
+          >
+            <img src="./assets/activity.png" alt="activity" class="w-[15%]" />
+            <div>
+              <p class="font-abel text-[min(3.5vw,14px)] lg:text-[14px]">
+                100% Business Growth
+              </p>
+              <div
+                class="flex items-center gap-1 text-[min(3vw,12px)] lg:text-[12px]"
+              >
+                <img src="./assets/star.png" alt="star" class="w-3" />
+                <span class="font-abel text-black-500">4.9 </span
+                ><span class="font-poppins text-gray-500">(1520 Reviews)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- BOTTOM FLOATING CARD (z-20) -->
+          <div
+            class="absolute z-20 bottom-[13%] left-[1%] bg-white rounded-xl w-[40%] px-[3%] py-[2%] shadow-lg animate-[float_5s_ease-in-out_infinite_1s]"
+          >
+            <p class="font-abel text-[min(3.5vw,14px)] lg:text-[14px]">
+              100,000 Happy Clients
+            </p>
+            <div
+              class="flex items-center gap-1 text-[min(3vw,12px)] lg:text-[12px]"
+            >
+              <img src="./assets/star.png" alt="star" class="w-3" />
+              <span class="font-abel text-black-500">4.9 </span
+              ><span class="font-poppins text-gray-500">(15k Reviews)</span>
+            </div>
+          </div>
+
+          <!-- PERSON IMAGE (z-30) -->
+          <img
+            src="./assets/person.png"
+            alt="Person"
+            class="absolute bottom-0 right-0 z-30 w-[81%]"
+          />
+        </div>
+      </section>
+
+      <!-- ============================== SERVICES ============================== -->
+      <section id="about" class="py-16 lg:py-24">
+        <!-- Section Header -->
+        <div class="text-center mb-20">
+          <p
+            class="font-abel text-sm tracking-[0.45em] text-gray-400 uppercase"
+          >
+            Service
+          </p>
+          <h2 class="font-abel mt-4 text-5xl text-midnight">
+            Our Vison & Our Goal
+          </h2>
+        </div>
+
+        <!-- Cards -->
+        <div
+          class="grid grid-cols-1 md:flex md:overflow-x-auto md:snap-x md:pb-14 lg:grid lg:grid-cols-3 lg:pb-0 lg:overflow-visible gap-8 lg:gap-[50px] no-scrollbar"
+        >
+          <!-- Card -->
+          <div
+            class="relative bg-white text-black rounded-3xl px-10 py-12 text-center shadow-[0_12px_32px_rgba(0,0,0,0.08)] md:w-[320px] lg:w-auto shrink-0 md:snap-center transition-transform duration-300 hover:-translate-y-4 hover:shadow-2xl"
+          >
+            <!-- Icon -->
+            <div class="flex justify-center mb-6">
+              <div
+                class="w-14 h-14 rounded-xl flex items-center justify-center text-white text-xl"
+              >
+                <img src="assets/activity.png" alt="" />
+              </div>
+            </div>
+
+            <h3 class="font-abel text-[36px] mb-[32px]">Graphic Design</h3>
+
+            <p class="font-poppins text-[18px] leading-relaxed mb-[18px]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+              dui mi, bibendum eu erat id, ultricies semper metus. Nunc dapibus
+              laoreet dolor nec imperdiet.
+            </p>
+
+            <button
+              class="font-poppins text-[18px] font-medium mt-8 bg-orange-500 text-white px-8 py-3 rounded-xl hover:bg-orange-600 transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95"
+            >
+              Learn More
+            </button>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="relative bg-white text-black rounded-3xl px-10 py-12 text-center shadow-[0_12px_32px_rgba(0,0,0,0.08)] md:w-[320px] lg:w-auto shrink-0 md:snap-center transition-transform duration-300 hover:-translate-y-4 hover:shadow-2xl"
+          >
+            <div class="flex justify-center mb-6">
+              <div
+                class="w-14 h-14 rounded-xl flex items-center justify-center text-white text-xl"
+              >
+                <img src="assets/video.png" alt="" />
+              </div>
+            </div>
+
+            <h3 class="font-abel text-[36px] mb-[32px]">Video Editing</h3>
+
+            <p class="font-poppins text-[18px] leading-relaxed mb-[18px]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+              dui mi, bibendum eu erat id, ultricies semper metus. Nunc dapibus
+              laoreet dolor nec imperdiet.
+            </p>
+
+            <button
+              class="font-poppins text-[18px] font-medium mt-8 bg-orange-500 text-white px-8 py-3 rounded-xl hover:bg-orange-600 transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95"
+            >
+              Learn More
+            </button>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="relative bg-white text-black rounded-3xl px-10 py-12 text-center shadow-[0_12px_32px_rgba(0,0,0,0.08)] md:w-[320px] lg:w-auto shrink-0 md:snap-center transition-transform duration-300 hover:-translate-y-4 hover:shadow-2xl"
+          >
+            <div class="flex justify-center mb-6">
+              <div
+                class="w-14 h-14 rounded-xl flex items-center justify-center text-white text-xl"
+              >
+                <img src="assets/statics.png" alt="" />
+              </div>
+            </div>
+
+            <h3 class="font-abel text-[36px] mb-[32px]">Digital Marketing</h3>
+
+            <p class="font-poppins text-[18px] leading-relaxed mb-[18px]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+              dui mi, bibendum eu erat id, ultricies semper metus. Nunc dapibus
+              laoreet dolor nec imperdiet.
+            </p>
+
+            <button
+              class="font-poppins text-[18px] font-medium mt-8 bg-orange-500 text-white px-8 py-3 rounded-xl hover:bg-orange-600 transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== FEATURE ============================== -->
+      <section id="app" class="py-16 lg:py-24">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center"
+        >
+          <!-- LEFT CONTENT -->
+          <div class="text-center lg:text-left">
+            <h2
+              class="text-[22px] lg:text-[22px] font-dm-sans font-medium text-dark-indigo"
+            >
+              Many Blocks and <br />
+              Components
+            </h2>
+
+            <p
+              class="font-dm-sans text-[16px] mt-8 text-gray-500 max-w-md leading-relaxed mx-auto lg:mx-0"
+            >
+              Startup Framework contains components and complex blocks which can
+              easily be integrated into almost any design.
+            </p>
+
+            <button
+              class="font-dm-sans text-[16px] mt-8 lg:mt-12 px-[38px] py-[13px] rounded-full border-2 border-gray-300 text-dark-indigo font-medium hover:bg-blaze-orange hover:text-white hover:border-blaze-orange transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95"
+            >
+              Explore
+            </button>
+          </div>
+
+          <!-- RIGHT IMAGE -->
+          <div class="relative">
+            <div class="overflow-hidden rounded-3xl">
+              <img
+                src="./assets/featureImage.png"
+                alt="Feature visual"
+                class="w-full h-full object-cover"
+              />
+            </div>
+
+            <!-- Purple Circle Overlay (Play Button) -->
+            <button
+              id="feature-play-btn"
+              type="button"
+              aria-label="Play video"
+              title="Play video"
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-purple-blue rounded-full flex items-center justify-center text-white text-3xl shadow-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl cursor-pointer"
+            >
+              <i class="fa-solid fa-play ml-1" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== TESTIMONIALS ============================== -->
+      <section class="py-16 lg:py-24">
+        <!-- Section Header -->
+        <div class="text-center mb-20">
+          <p
+            class="font-abel text-[14px] tracking-[0.3em] text-gray-400 uppercase"
+          >
+            Testimonials
+          </p>
+          <h2 class="font-abel mt-5 text-[52px] text-midnight">
+            What Clients say about us
+          </h2>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
+          <!-- Card -->
+          <div
+            class="p-10 h-full flex gap-6 border-2 border-transparent hover:border-gray-400 transition-colors duration-300 rounded-2xl"
+          >
+            <img
+              src="./assets/client1.png"
+              alt="Rayhan Curran"
+              class="w-[70px] h-[70px] rounded-xl object-cover"
+            />
+            <div class="flex flex-col justify-between">
+              <p
+                class="font-dm-sans font-medium text-[18px] text-midnight leading-relaxed"
+              >
+                Get a fully retina ready site when you build with Startup
+                Framework. Websites look sharper and more gorgeous on devices
+                with retina display support
+              </p>
+
+              <p
+                class="font-dm-sans text-[14px] text-midnight mt-6 font-bold tracking-widest uppercase opacity-30"
+              >
+                Rayhan Curran
+              </p>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="p-10 h-full flex gap-6 border-2 border-transparent hover:border-gray-400 transition-colors duration-300 rounded-2xl"
+          >
+            <img
+              src="./assets/client2.png"
+              alt="Kayley Frame"
+              class="w-[70px] h-[70px] rounded-xl object-cover"
+            />
+            <div class="flex flex-col justify-between">
+              <p
+                class="font-dm-sans font-medium text-[18px] text-midnight leading-relaxed"
+              >
+                As a business targeting high net worth individuals, we were
+                looking for a slick, cool and minimalistic design for our
+                website
+              </p>
+
+              <p
+                class="font-dm-sans text-[14px] text-midnight mt-6 font-bold tracking-widest uppercase opacity-30"
+              >
+                Kayley Frame
+              </p>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="p-10 h-full flex gap-6 border-2 border-transparent hover:border-gray-400 transition-colors duration-300 rounded-2xl"
+          >
+            <img
+              src="./assets/client3.png"
+              alt="Gene Whitfield"
+              class="w-[70px] h-[70px] rounded-xl object-cover"
+            />
+            <div class="flex flex-col justify-between">
+              <p
+                class="font-dm-sans font-medium text-[18px] text-midnight leading-relaxed"
+              >
+                The most important part of the Startup Framework is the samples
+              </p>
+
+              <p
+                class="font-dm-sans text-[14px] text-midnight mt-6 font-bold tracking-widest uppercase opacity-30"
+              >
+                Gene Whitfield
+              </p>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="p-10 h-full flex gap-6 border-2 border-transparent hover:border-gray-400 transition-colors duration-300 rounded-2xl"
+          >
+            <img
+              src="./assets/client4.png"
+              alt="Allan Kim"
+              class="w-[70px] h-[70px] rounded-xl object-cover"
+            />
+            <div class="flex flex-col justify-between">
+              <p
+                class="font-dm-sans font-medium text-[18px] text-midnight leading-relaxed"
+              >
+                I've built my website with Startup just in one day, and it was
+                ready-to-go.
+              </p>
+
+              <p
+                class="font-dm-sans text-[14px] text-midnight mt-6 font-bold tracking-widest uppercase opacity-30"
+              >
+                Allan Kim
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== TEAM ============================== -->
+      <section class="py-16 lg:py-24">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <p
+            class="font-abel text-[14px] tracking-[0.3em] text-gray-400 uppercase"
+          >
+            Our Team
+          </p>
+          <h2 class="mt-4 font-abel text-[52px] text-midnight">
+            Meet The Team
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- CARD 1 -->
+          <div
+            class="border border-dawn-pink rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-transparent"
+          >
+            <div class="flex flex-col items-center text-center px-8 py-10">
+              <img
+                src="./assets/teamMember1.png"
+                alt="Vanessa Laird"
+                class="w-[120px] h-[120px] rounded-full object-cover"
+              />
+              <h3
+                class="mt-6 font-dm-sans text-[22px] font-medium text-dark-indigo"
+              >
+                Vanessa Laird
+              </h3>
+              <p
+                class="mt-2 text-[14px] tracking-[0.2em] text-haiti uppercase opacity-40"
+              >
+                UI Designer
+              </p>
+            </div>
+
+            <div class="grid grid-cols-3 border-t border-dawn-pink">
+              <div class="h-14 border-r border-dawn-pink"></div>
+              <div class="h-14 border-r border-dawn-pink"></div>
+              <div class="h-14"></div>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+          <div
+            class="border border-dawn-pink rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-transparent"
+          >
+            <div class="flex flex-col items-center text-center px-8 py-10">
+              <img
+                src="./assets/teamMember2.png"
+                alt="Mason Campbell"
+                class="w-[120px] h-[120px] rounded-full object-cover"
+              />
+              <h3
+                class="mt-6 font-dm-sans text-[22px] font-medium text-dark-indigo"
+              >
+                Mason Campbell
+              </h3>
+              <p
+                class="mt-2 text-[14px] tracking-[0.2em] text-haiti uppercase opacity-40"
+              >
+                UI Designer
+              </p>
+            </div>
+
+            <div class="grid grid-cols-3 border-t border-dawn-pink">
+              <div class="h-14 border-r border-dawn-pink"></div>
+              <div class="h-14 border-r border-dawn-pink"></div>
+              <div class="h-14"></div>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div
+            class="border border-dawn-pink rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-transparent"
+          >
+            <div class="flex flex-col items-center text-center px-8 py-10">
+              <img
+                src="./assets/teamMember3.png"
+                alt="Irea Evans"
+                class="w-[120px] h-[120px] rounded-full object-cover"
+              />
+              <h3
+                class="mt-6 font-dm-sans text-[22px] font-medium text-dark-indigo"
+              >
+                Irea Evans
+              </h3>
+              <p
+                class="mt-2 text-[14px] tracking-[0.2em] text-haiti uppercase opacity-40"
+              >
+                Client Manager
+              </p>
+            </div>
+
+            <div class="grid grid-cols-3 border-t border-dawn-pink">
+              <div class="h-14 border-r border-dawn-pink"></div>
+              <div class="h-14 border-r border-dawn-pink"></div>
+              <div class="h-14"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== NEWSLETTER ============================== -->
+      <section id="contacts" class="py-16 lg:py-24">
+        <!-- Section Header -->
+        <div class="text-center mb-24">
+          <p
+            class="font-abel text-[14px] tracking-[0.3em] text-gray-400 uppercase"
+          >
+            Our Team
+          </p>
+          <h2 class="mt-6 font-abel text-[52px] text-midnight">
+            Subscribe Our Newsletter
+          </h2>
+        </div>
+
+        <!-- Content -->
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-24"
+        >
+          <!-- LEFT ILLUSTRATION -->
+          <div class="flex justify-center">
+            <img
+              src="./assets/emailIcon.png"
+              alt="Newsletter illustration"
+              class="w-[80%] max-w-[420px] animate-[float_6s_ease-in-out_infinite] transition-transform duration-500 hover:scale-105"
+            />
+          </div>
+
+          <!-- RIGHT FORM -->
+          <div class="relative text-center lg:text-left">
+            <p
+              class="mb-10 max-w-[700px] font-roboto text-[18px] text-black mx-auto lg:mx-0"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam.
+            </p>
+
+            <!-- Input -->
+            <div
+              class="relative w-full p-[1px] bg-gradient-to-b from-[#151439] to-transparent rounded-full shadow-xl"
+            >
+              <input
+                type="email"
+                placeholder="Your E-mail here..."
+                class="w-full px-6 py-4 lg:px-10 lg:py-6 rounded-full text-black font-roboto text-lg lg:text-[24px] bg-white focus:outline-none"
+              />
+            </div>
+
+            <!-- Glow -->
+            <div
+              class="absolute inset-x-0 -bottom-10 h-32 bg-white blur-3xl opacity-30 -z-10"
+            ></div>
+
+            <!-- Button -->
+            <button
+              class="mt-6 font-poppins w-full bg-blaze-orange text-white py-5 rounded-2xl text-[18px] font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95"
+            >
+              Subscribe Our Newsletter
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== FOOTER ============================== -->
+      <footer class="py-12">
+        <!-- Top Row -->
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-6 text-center lg:text-left"
+        >
+          <!-- Logo -->
+          <div class="flex items-center text-2xl font-bold">
+            <img src="./assets/logo.png" alt="Epixelab logo" class="h-[23px]" />
+          </div>
+
+          <!-- Copyright -->
+          <p class="font-dm-sans text-[16px] text-dark-indigo text-center">
+            © 2020 Epixelab. All rights reserved.
+          </p>
+
+          <!-- Navigation -->
+          <nav
+            class="flex flex-wrap justify-center lg:justify-end items-center gap-6 lg:gap-8 font-dm-sans text-dark-indigo text-[16px]"
+          >
+            <a href="#" class="hover:opacity-50 transition">Portfolio</a>
+            <a href="#" class="hover:opacity-50 transition">How it Works</a>
+            <a href="#" class="hover:opacity-50 transition">Pricing</a>
+            <a href="#" class="hover:opacity-50 transition">About</a>
+            <a href="#" class="hover:opacity-50 transition">Login</a>
+          </nav>
+        </div>
+
+        <!-- Divider -->
+        <div class="my-[31px] h-[2px] bg-dawn-pink"></div>
+
+        <!-- Bottom Text -->
+        <p
+          class="font-dm-sans text-haiti text-[16px] opacity-40 text-center lg:text-left"
+        >
+          Startup Framework contains components and complex blocks which can
+          easily be integrated into almost any design.
+        </p>
+      </footer>
+    </div>
+
+    <!-- ============================== MOBILE MENU SCRIPT ============================== -->
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const menuIcon = menuBtn.querySelector("i");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+
+        // Toggle icon
+        if (mobileMenu.classList.contains("hidden")) {
+          menuIcon.classList.remove("fa-xmark");
+          menuIcon.classList.add("fa-bars");
+        } else {
+          menuIcon.classList.remove("fa-bars");
+          menuIcon.classList.add("fa-xmark");
+        }
+      });
+
+      // Feature Play Button Logic
+      const playBtn = document.getElementById("feature-play-btn");
+      const playIcon = playBtn.querySelector("i");
+      let isPlaying = false;
+
+      playBtn.addEventListener("click", () => {
+        isPlaying = !isPlaying;
+        if (isPlaying) {
+          playIcon.classList.remove("fa-play", "ml-1");
+          playIcon.classList.add("fa-pause");
+        } else {
+          playIcon.classList.remove("fa-pause");
+          playIcon.classList.add("fa-play", "ml-1");
+        }
+      });
+
+      // Active Link Highlighting
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (scrollY >= sectionTop - 150) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("font-normal");
+          link.classList.add("font-semibold");
+          if (link.getAttribute("href").includes(current)) {
+            link.classList.add("font-normal");
+            link.classList.remove("font-semibold");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
