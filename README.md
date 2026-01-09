@@ -2,6 +2,8 @@
 
 This repository contains the first assignment for the Ostad MERN Stack Learning Course. The objective was to convert a Figma design into a responsive landing page using HTML and Tailwind CSS.
 
+**🔴 Live Link:** [https://rimondipta.github.io/Landing_Page/](https://rimondipta.github.io/Landing_Page/)
+
 ## Features
 
 - **Fully Responsive Layout**: Adapts seamlessly to Desktop, Tablet, and Mobile screens.
