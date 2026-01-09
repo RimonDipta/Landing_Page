@@ -30,18 +30,18 @@ This repository contains the first assignment for the Ostad MERN Stack Learning 
 
 ### Desktop View
 
-![Desktop Screenshot](./screenshots/desktop-screenshot.png)
+<img src="./screenshots/desktop-screenshot.png" alt="Desktop Screenshot" width="500" />
 
 ### Tablet View
 
-![Tablet Screenshot](./screenshots/tablet-screenshot.png)
+<img src="./screenshots/tablet-screenshot.png" alt="Tablet Screenshot" width="300" />
 
 ### Mobile View
 
-![Mobile Screenshot](./screenshots/mobile-screenshot.png)
+<img src="./screenshots/mobile-screenshot.png" alt="Mobile Screenshot" width="200" />
 
 ## Design Reference
 
 **Original Design provided by Ostad:**
 
-![Original Design](./screenshots/ostad-design.png)
+<img src="./screenshots/ostad-design.png" alt="Original Design" width="500" />
