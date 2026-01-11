@@ -47,9 +47,3 @@ This repository contains the first assignment for the Ostad MERN Stack Learning 
 **Original Design provided by Ostad:**
 
 <img src="./screenshots/ostad-design.png" alt="Original Design" width="500" />
-
-## Visual Comparison
-
-|                                    My Implementation                                    |                                Original Design                                 |
-| :-------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------: |
-| <img src="./screenshots/desktop-screenshot.png" alt="Desktop Screenshot" width="400" /> | <img src="./screenshots/ostad-design.png" alt="Original Design" width="400" /> |
